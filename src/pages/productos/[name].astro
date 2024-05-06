@@ -1,0 +1,27 @@
+---
+import sections from "../../content/sections/sections.json";
+import ListOfProducts from "../../components/ListOfProducts.astro";
+import HeaderProducts from "../../components/HeaderProducts.astro";
+import Layout from "../../layouts/Layout.astro";
+import SectionWork from "../../components/SectionWork.astro";
+
+export function getStaticPaths() {
+  const props = sections.map((section) => {
+    return {
+      params: {
+        name: section.name,
+      },
+    };
+  });
+  return props;
+}
+const { name } = Astro.params;
+---
+
+<Layout title="Productos">
+  <HeaderProducts name={name} />
+  <section class="px-phone py-10">
+    <ListOfProducts name={name} />
+  </section>
+  <SectionWork name={name} />
+</Layout>

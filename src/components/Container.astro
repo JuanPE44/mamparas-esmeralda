@@ -1,0 +1,20 @@
+---
+interface Props {
+  backgroundUrl?: string;
+  className?: string;
+  height?: string;
+  pb?: string;
+}
+
+const { backgroundUrl, className = "", height, pb = "pb-20" } = Astro.props;
+---
+
+<section
+  style={`background-image: url(${backgroundUrl}); background-size: cover; height: ${height};`}
+>
+  <div
+    class={`${className} ${backgroundUrl ? "bg-shadow" : "bg-white"} ${pb} pt-10 z-50 w-full h-full px-phone`}
+  >
+    <slot />
+  </div>
+</section>

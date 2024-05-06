@@ -1,0 +1,109 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Whatsapp from "../components/Whatsapp.astro";
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="relative min-h-screen overflow-x-hidden bg-gray-100">
+    <Whatsapp />
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>
+<style is:global>
+  :root {
+    --color-primary: #42736f;
+    --color-shadow-1: rgba(51, 51, 51, 0.92);
+    --color-shadow-2: rgba(99, 99, 99, 0.566);
+    --border: 10px;
+    --px-phone: 20px;
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+
+  .text-rainbow {
+    background: linear-gradient(
+      89.81deg,
+      var(--color-primary),
+      #689ddab1,
+      var(--color-primary)
+    );
+    fill: linear-gradient(
+      89.81deg,
+      var(--color-primary),
+      #689dda90,
+      var(--color-primary)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    background-size: 300%;
+    animation: gradientText 2s ease alternate-reverse infinite;
+  }
+
+  .text-juan {
+    background: linear-gradient(
+      89.81deg,
+      red,
+      orange,
+      yellow,
+      lightgreen,
+      lightblue,
+      violet
+    );
+    fill: linear-gradient(
+      89.81deg,
+      red,
+      orange,
+      yellow,
+      lightgreen,
+      lightblue,
+      violet
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    background-size: 300%;
+    animation: gradientText 2s ease alternate-reverse infinite;
+  }
+
+  @keyframes gradientText {
+    0% {
+      background-position: left;
+    }
+    100% {
+      background-position: right;
+    }
+  }
+</style>

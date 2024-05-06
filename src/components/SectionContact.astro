@@ -1,0 +1,42 @@
+<section class="relative px-phone py-20" id="contacto">
+  <div
+    class="absolute top-0 left-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,255,128,0.08)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]"
+  >
+  </div>
+  <div class="sm:max-w-2xl sm:mx-auto w-full">
+    <h2 class="font-bold text-2xl text-rainbow">Contacto</h2>
+    <p class="mt-2 italic text-sm">Envianos un mensaje!</p>
+    <form
+      action="https://formsubmit.co/valenruizph@gmail.com"
+      method="POST"
+      class="flex flex-col gap-4 w-full max-w-96 rounded-xl mt-10 bg-white text-[#302916dd]"
+      id="contacto"
+    >
+      <input
+        type="text"
+        name="name"
+        placeholder="Nombre"
+        class="bg-gray-200 rounded-lg text-black px-2 py-2 outline-[#30291622]"
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Correo electronico"
+        class="bg-gray-200 rounded-lg text-black px-2 py-2 outline-[#30291622]"
+      />
+
+      <textarea
+        name="comment"
+        cols="15"
+        rows="5"
+        placeholder="Descripcion"
+        class="bg-gray-200 rounded-lg text-black px-2 py-2 outline-[#30291622]"
+      ></textarea>
+      <button
+        type="submit"
+        class="bg-[var(--color-primary)] rounded-full py-3 text-white"
+        >Enviar</button
+      >
+    </form>
+  </div>
+</section>

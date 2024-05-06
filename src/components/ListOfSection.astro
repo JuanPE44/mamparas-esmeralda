@@ -1,0 +1,24 @@
+---
+import sections from "../content/sections/sections.json";
+---
+
+<div class="w-full flex flex-col gap-4 sm:max-w-2xl sm:mx-auto">
+  {
+    sections.map((section) => {
+      const name = section.name;
+      const title = section.title;
+      const url = section.url;
+      return (
+        <a
+          href={`productos/${name}`}
+          class="rounded-lg shadow-xl overflow-hidden bg-cover bg-center cursor-pointer"
+          style={`background-image: ${url}`}
+        >
+          <div class="bg-[var(--color-shadow-2)] h-72 flex justify-center items-center">
+            <h4 class="text-white text-lg uppercase">{title}</h4>
+          </div>
+        </a>
+      );
+    })
+  }
+</div>

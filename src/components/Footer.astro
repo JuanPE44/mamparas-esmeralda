@@ -1,0 +1,34 @@
+---
+import IconFacebook from "./icons/IconFacebook.astro";
+import IconInstagram from "./icons/IconInstagram.astro";
+import IconX from "./icons/IconX.astro";
+import { Image } from "astro:assets";
+import localLogo from "../../public/images/logos/logo-blanco.webp";
+---
+
+<footer class="px-phone py-10 bg-[#333] flex flex-col">
+  <div class="flex justify-between items-center">
+    <Image
+      src={localLogo}
+      alt="Logo vidrieria Mamparas esmeralda en blanco"
+      class="max-w-40 object-contain w-fit"
+    />
+    <div class="flex gap-2">
+      <IconFacebook />
+      <IconInstagram />
+      <IconX />
+    </div>
+  </div>
+  <div
+    class="flex flex-col items-center text-white pt-4 mt-10 border-t-[1px] border-[#ddd] text-xs"
+  >
+    <p>Copyright by Mamparas esmeralda 2024</p>
+    <p>
+      Developed by <a
+        target="_blank"
+        href="https://www.instagram.com/juanpe.dev"
+        class="underline italic text-juan">Juanpe.dev</a
+      >
+    </p>
+  </div>
+</footer>

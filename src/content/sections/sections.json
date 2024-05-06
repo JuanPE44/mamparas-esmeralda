@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "mamparas",
+    "title": "Mamparas",
+    "subtitle": "Calidad y estilo en Mamparas de vidrio",
+    "url": "url('/images/mamparas/principal.webp')"
+  },
+  {
+    "id": 2,
+    "name": "barandas",
+    "title": "Barandas y balcones",
+    "subtitle": "Calidad y estilo en Mamparas de vidrio",
+    "url": "url('/images/barandas-y-balcones/principal.jpg')"
+  },
+  {
+    "id": 3,
+    "name": "dvh",
+    "title": "Doble vidrio hermetico",
+    "subtitle": "Calidad y estilo en Mamparas de vidrio",
+    "url": "url('/images/dvh/principal.jpg')"
+  },
+  {
+    "id": 4,
+    "name": "procesado",
+    "title": "Procesado",
+    "description": "Calidad y estilo en Mamparas de vidrio",
+    "url": "url('/images/procesado/principal.jpg')"
+  }
+]
