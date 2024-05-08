@@ -1,11 +1,12 @@
-<section class="relative px-phone py-20" id="contacto">
-  <div
-    class="absolute top-0 left-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,255,128,0.08)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]"
-  >
-  </div>
+---
+import Container from "./Container.astro";
+import H2 from "./H2.astro";
+---
+
+<Container>
   <div class="sm:max-w-2xl sm:mx-auto w-full">
-    <h2 class="font-bold text-2xl text-rainbow">Contacto</h2>
-    <p class="mt-2 italic text-sm">Envianos un mensaje!</p>
+    <H2 className="text-rainbow">Contacto</H2>
+    <p class="mt-2 italic text-sm py-3">Envianos un mensaje!</p>
     <form
       action="https://formsubmit.co/valenruizph@gmail.com"
       method="POST"
@@ -39,4 +40,4 @@
       >
     </form>
   </div>
-</section>
+</Container>
