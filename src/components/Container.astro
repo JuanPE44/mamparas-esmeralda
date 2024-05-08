@@ -4,16 +4,24 @@ interface Props {
   className?: string;
   height?: string;
   pb?: string;
+  pt?: string;
 }
 
-const { backgroundUrl, className = "", height, pb = "pb-20" } = Astro.props;
+const {
+  backgroundUrl,
+  className = "",
+  height,
+  pb = "pb-20",
+  pt = "pt-10",
+} = Astro.props;
 ---
 
 <section
-  style={`background-image: url(${backgroundUrl}); background-size: cover; height: ${height};`}
+  style={`background-image: url(${backgroundUrl}); background-size: cover;`}
 >
   <div
-    class={`${className} ${backgroundUrl ? "bg-shadow" : "bg-white"} ${pb} pt-10 z-50 w-full h-full px-phone`}
+    style={`min-height: ${height};`}
+    class={`${className} ${backgroundUrl ? "bg-shadow" : "bg-white"} ${pb} ${pt} pt-10 z-50 w-full h-full px-phone`}
   >
     <slot />
   </div>
