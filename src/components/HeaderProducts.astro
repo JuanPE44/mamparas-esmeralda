@@ -1,5 +1,6 @@
 ---
 import sections from "../content/sections/sections.json";
+import Container from "./Container.astro";
 interface Props {
   name: string;
 }
@@ -9,11 +10,7 @@ const sectionsFiltered = sections.filter((section) => section.name == name);
 const { url, title, subtitle } = sectionsFiltered[0];
 ---
 
-<section class="h-[35vh] bg-cover" style={`background-image: ${url}`}>
-  <div
-    class="pt-20 z-[100] w-full h-full px-phone bg-[var(--color-shadow-1)] flex flex-col justify-center"
-  >
-    <h1 class="text-4xl text-white font-bold mb-2 text-rainbow">{title}</h1>
-    <h2 class="text-[#eee]">{subtitle}</h2>
-  </div>
-</section>
+<Container backgroundUrl={url} className="flex flex-col" pt="pt-28">
+  <h1 class="text-4xl text-white font-bold mb-2 text-rainbow">{title}</h1>
+  <h2 class="text-[#eee]">{subtitle}</h2>
+</Container>
