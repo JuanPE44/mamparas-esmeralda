@@ -107,3 +107,21 @@ const { title } = Astro.props;
     }
   }
 </style>
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.getElementById("header");
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > 20) {
+      header.classList.add("bg-white");
+      header.classList.remove("bg-transparent");
+      header.classList.add("py-1");
+      header.classList.remove("py-4");
+    } else {
+      header.classList.remove("bg-white");
+      header.classList.add("bg-transparent");
+      header.classList.add("py-4");
+      header.classList.remove("py-1");
+    }
+  });
+</script>

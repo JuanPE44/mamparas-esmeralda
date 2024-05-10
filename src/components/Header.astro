@@ -8,15 +8,16 @@ import { Image } from "astro:assets";
 import localLogo from "../../public/images/logos/logo.webp";
 ---
 
-<header class="fixed top-0 w-full bg-white z-50 shadow-sm">
+<header class="fixed top-0 w-full bg-transparent z-50 shadow-sm">
   <div
-    class="relative py-1 px-phone flex justify-between items-center w-full sm:max-w-2xl sm:mx-auto"
+    class="relative py-4 px-phone flex justify-between transition-[10s] items-center w-full sm:max-w-2xl sm:mx-auto"
+    id="header"
   >
     <a href="/" class="">
       <Image
         src={localLogo}
         alt="Logo vidrieria Mamparas esmeralda"
-        class="w-24 object-contain"
+        class="h-10 w-auto object-contain"
       />
     </a>
     <div class="hidden sm:flex">
@@ -28,18 +29,18 @@ import localLogo from "../../public/images/logos/logo.webp";
       </ul>
     </div>
 
-    <div class="cursor-pointer sm:hidden transition-[0.5s]" id="menu-icon">
-      <div id="open">
+    <div class="cursor-pointer sm:hidden transition-[0.5s]">
+      <div class="menu-icon">
         <IconMenu />
-      </div>
-      <div id="close" class="hidden">
-        <IconClose />
       </div>
     </div>
     <div
-      class="sm:hidden pb-20 bg-gradient-to-tr from-slate-600 to-[var(--color-primary)] p-10 flex flex-col translate-x-full justify-between absolute top-[100%] transition-[0.5s] right-0 w-5/6 h-[95vh] bg-white z-50"
+      class="sm:hidden pb-20 bg-gradient-to-tr from-slate-600 to-primary p-10 flex flex-col translate-x-full justify-between absolute top-0 transition-[0.5s] right-0 w-5/6 h-screen bg-white z-50"
       id="menu"
     >
+      <div class="menu-icon">
+        <IconClose />
+      </div>
       <ul class="flex gap-4 flex-col text-white font-bold text-xl" id="menu-a">
         <li><a href="/">Home</a></li>
         <li><a href="/#productos">Productos</a></li>
@@ -59,11 +60,17 @@ import localLogo from "../../public/images/logos/logo.webp";
 </header>
 
 <script>
-  const menuIcon = document.getElementById("menu-icon");
+  const menuIcons = document.querySelectorAll(".menu-icon");
   const close = document.getElementById("close");
   const open = document.getElementById("open");
   const menu = document.getElementById("menu");
   const menuA = document.querySelectorAll("#menu-a li a");
+
+  menuIcons.forEach((icon) => {
+    icon.addEventListener("click", () => {
+      menu.classList.toggle("translate-x-full");
+    });
+  });
 
   menuA.forEach((a) => {
     a.addEventListener("click", () => {
@@ -71,11 +78,5 @@ import localLogo from "../../public/images/logos/logo.webp";
       close.classList.toggle("hidden");
       open.classList.toggle("hidden");
     });
-  });
-
-  menuIcon.addEventListener("click", () => {
-    menu.classList.toggle("translate-x-full");
-    close.classList.toggle("hidden");
-    open.classList.toggle("hidden");
   });
 </script>
