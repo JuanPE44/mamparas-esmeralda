@@ -1,11 +1,12 @@
 ---
 interface Props {
-  className?: string;
+  color?: string;
+  m?: string;
 }
 
-const { className = "" } = Astro.props;
+const { color = "text-white", m = "mb-6 mt-12" } = Astro.props;
 ---
 
-<h2 class={`${className} font-bold text-3xl mb-6 mt-12 text-white`}>
+<h2 class={`${color} ${m} font-bold text-3xl `}>
   <slot />
 </h2>

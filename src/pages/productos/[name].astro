@@ -4,6 +4,7 @@ import ListOfProducts from "../../components/ListOfProducts.astro";
 import HeaderProducts from "../../components/HeaderProducts.astro";
 import Layout from "../../layouts/Layout.astro";
 import SectionWork from "../../components/SectionWork.astro";
+import H2 from "../../components/H2.astro";
 
 export function getStaticPaths() {
   const props = sections.map((section) => {
@@ -21,6 +22,7 @@ const { name } = Astro.params;
 <Layout title="Productos">
   <HeaderProducts name={name} />
   <section class="px-phone py-10">
+    <H2 color="text-[#333]" m="mb-6 mt-0">Nuestro servicio de {name}</H2>
     <ListOfProducts name={name} />
   </section>
   <SectionWork name={name} />

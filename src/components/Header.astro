@@ -8,12 +8,12 @@ import { Image } from "astro:assets";
 import localLogo from "../../public/images/logos/logo.webp";
 ---
 
-<header class="fixed top-0 w-full bg-transparent z-50 shadow-sm">
+<header class="fixed top-0 w-full bg-white z-50 shadow-sm">
   <div
-    class="relative py-4 px-phone flex justify-between transition-[10s] items-center w-full sm:max-w-2xl sm:mx-auto"
+    class="relative py-2 px-phone flex justify-between transition-[0.5s] items-center w-full sm:max-w-2xl sm:mx-auto"
     id="header"
   >
-    <a href="/" class="">
+    <a href="/#home">
       <Image
         src={localLogo}
         alt="Logo vidrieria Mamparas esmeralda"
@@ -21,8 +21,8 @@ import localLogo from "../../public/images/logos/logo.webp";
       />
     </a>
     <div class="hidden sm:flex">
-      <ul class="gap-4 flex text-[var(--color-primary)] uppercase text-xs">
-        <li><a href="/">Home</a></li>
+      <ul class="gap-4 flex text-primary uppercase text-xs">
+        <li><a href="/#home">Home</a></li>
         <li><a href="/#productos">Productos</a></li>
         <li><a href="/#empresa">La empresa</a></li>
         <li><a href="/#contacto">Contacto</a></li>
@@ -34,18 +34,35 @@ import localLogo from "../../public/images/logos/logo.webp";
         <IconMenu />
       </div>
     </div>
+    <!-- Menu mobile -->
     <div
-      class="sm:hidden pb-20 bg-gradient-to-tr from-slate-600 to-primary p-10 flex flex-col translate-x-full justify-between absolute top-0 transition-[0.5s] right-0 w-5/6 h-screen bg-white z-50"
+      class="sm:hidden pb-20 bg-gradient-to-tr from-slate-600 to-primary py-2 px-phone flex flex-col translate-x-full justify-between absolute top-0 transition-[0.5s] right-0 w-3/4 h-screen bg-white z-50"
       id="menu"
     >
-      <div class="menu-icon">
-        <IconClose />
-      </div>
-      <ul class="flex gap-4 flex-col text-white font-bold text-xl" id="menu-a">
-        <li><a href="/">Home</a></li>
-        <li><a href="/#productos">Productos</a></li>
-        <li><a href="/#empresa">La empresa</a></li>
-        <li><a href="/#contacto">Contacto</a></li>
+      <ul class="flex gap-4 flex-col text-white font-light text-xl" id="menu-a">
+        <li class="flex justify-end pb-4 border-b-2 border-primary">
+          <div class="menu-icon cursor-pointer">
+            <IconClose />
+          </div>
+        </li>
+        <li>
+          <a href="/#home" class="flex rounded-lg p-1 hover:bg-[#3333]">Home</a>
+        </li>
+        <li>
+          <a href="/#productos" class="flex rounded-lg p-1 hover:bg-[#3333]"
+            >Productos</a
+          >
+        </li>
+        <li>
+          <a href="/#empresa" class="flex rounded-lg p-1 hover:bg-[#3333]"
+            >La empresa</a
+          >
+        </li>
+        <li>
+          <a href="/#contacto" class="flex rounded-lg p-1 hover:bg-[#3333]"
+            >Contacto</a
+          >
+        </li>
       </ul>
       <div>
         <div class="flex gap-4">
@@ -53,30 +70,31 @@ import localLogo from "../../public/images/logos/logo.webp";
           <IconInstagram />
           <IconX />
         </div>
-        <div></div>
       </div>
     </div>
+    <button
+      class="top-0 left-0 fixed bg-shadow h-screen w-full cursor-pointer hidden menu-icon"
+      id="menu-background"></button>
   </div>
 </header>
 
 <script>
   const menuIcons = document.querySelectorAll(".menu-icon");
-  const close = document.getElementById("close");
-  const open = document.getElementById("open");
   const menu = document.getElementById("menu");
   const menuA = document.querySelectorAll("#menu-a li a");
+  const menuBackground = document.getElementById("menu-background");
 
   menuIcons.forEach((icon) => {
     icon.addEventListener("click", () => {
       menu.classList.toggle("translate-x-full");
+      menuBackground.classList.toggle("hidden");
     });
   });
 
   menuA.forEach((a) => {
     a.addEventListener("click", () => {
       menu.classList.toggle("translate-x-full");
-      close.classList.toggle("hidden");
-      open.classList.toggle("hidden");
+      menuBackground.classList.toggle("hidden");
     });
   });
 </script>

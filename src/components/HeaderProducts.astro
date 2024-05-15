@@ -1,16 +1,25 @@
 ---
 import sections from "../content/sections/sections.json";
 import Container from "./Container.astro";
+import H2 from "./H2.astro";
 interface Props {
   name: string;
 }
 
 const { name } = Astro.props;
 const sectionsFiltered = sections.filter((section) => section.name == name);
-const { url, title, subtitle } = sectionsFiltered[0];
+console.log(sectionsFiltered);
+const { title, subtitle } = sectionsFiltered[0];
 ---
 
-<Container backgroundUrl={url} className="flex flex-col" pt="pt-28">
-  <h1 class="text-4xl text-white font-bold mb-2 text-rainbow">{title}</h1>
-  <h2 class="text-[#eee]">{subtitle}</h2>
+<Container
+  className="flex flex-col"
+  backgroundUrl="/images/mamparas/principal.webp"
+  pt="pt-28"
+  pb="pb-10"
+>
+  <h1 class="text-4xl sm:text-5xl text-rainbow font-bold mb-4">
+    {title}
+  </h1>
+  <h3 class="text-[#eee] capitalize">{subtitle}</h3>
 </Container>
