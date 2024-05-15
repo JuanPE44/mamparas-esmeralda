@@ -1,0 +1,19 @@
+---
+interface Props {
+  name: string;
+  url: string;
+  title: string;
+}
+
+const { name, url, title } = Astro.props;
+---
+
+<a
+  href={`productos/${name}`}
+  class="rounded-lg shadow-xl overflow-hidden bg-cover bg-center cursor-pointer"
+  style={`background-image: url(${url})`}
+>
+  <div class="bg-[var(--color-shadow-2)] h-72 flex justify-center items-center">
+    <h4 class="text-white text-lg uppercase">{title}</h4>
+  </div>
+</a>

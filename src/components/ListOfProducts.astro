@@ -19,9 +19,9 @@ const products = productos[name];
           description={description}
           title={title}
           url={url}
-          finish={finish}
-          measures={measures}
-          glass={glass}
+          finish={finish ?? undefined}
+          measures={measures ?? undefined}
+          glass={glass ?? undefined}
         />
       );
     })

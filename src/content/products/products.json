@@ -33,6 +33,27 @@
       "glass": "Consulte nuestro muestrario"
     }
   ],
-  "barandas": [],
+  "barandas": [
+    {
+      "url": "botones-de-acero",
+      "title": "Botones de acero",
+      "description": "Ofrecemos un servicio especializado en la colocación de botones de acero para vidrios, ideales para su uso en barandas y balcones. Nuestro equipo experto garantiza una instalación precisa y segura, asegurando que tus estructuras de vidrio luzcan impecables y proporcionen la máxima seguridad. Con una atención meticulosa a cada detalle, nuestros servicios de colocación de botones de acero aseguran resultados duraderos y estéticamente atractivos, mejorando la apariencia y funcionalidad de tus espacios al aire libre"
+    },
+    {
+      "url": "cerco-de-pileta",
+      "title": "Cerco de pileta",
+      "description": "En nuestra empresa, nos especializamos en la instalación de botones de acero para vidrios en cercos de piscina, ofreciendo una solución segura y elegante para proteger tu área de natación. Nuestro equipo profesional se encarga de la colocación precisa y duradera de estos botones, asegurando la estabilidad y resistencia del cerco de vidrio. Con un enfoque en la seguridad y el diseño estético, nuestros servicios de instalación de botones de acero realzan la belleza de tu espacio exterior mientras proporcionan un entorno seguro para tu familia y amigos disfruten del agua con total tranquilidad."
+    },
+    {
+      "url": "pasamanos-acero-y-vidrio",
+      "title": "Pasamanos acero y vidrio",
+      "description": "una combinación elegante y funcional para tus escaleras y balcones. Nuestro equipo profesional se encarga de la colocación precisa y segura de estos pasamanos, garantizando no solo la estabilidad y resistencia, sino también la estética de tus espacios interiores y exteriores. Con un enfoque en la calidad y el diseño, nuestros servicios de instalación de pasamanos de acero y vidrio ofrecen una solución duradera y atractiva para embellecer y proteger tus áreas de tránsito"
+    },
+    {
+      "url": "postes-acero-y-vidrio",
+      "title": "Postes acero y vidrio",
+      "description": " una opción moderna y segura para cercos y barandas. Nuestro equipo altamente capacitado se encarga de la colocación precisa y duradera de estos postes, garantizando la estabilidad y resistencia de tus estructuras de vidrio. Con un enfoque en la calidad y la seguridad, nuestros servicios ofrecen una solución elegante y funcional para resaltar la belleza de tus espacios al aire libre mientras proporcionan protección y confiabilidad a largo plazo."
+    }
+  ],
   "vidrios": []
 }

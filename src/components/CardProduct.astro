@@ -12,23 +12,43 @@ interface Props {
 const { name, title, description, url, measures, finish, glass } = Astro.props;
 ---
 
-<div class="flex flex-col bg-white rounded-lg overflow-hidden">
+<div
+  class="flex flex-col bg-white rounded-lg overflow-hidden shadow-md text-pretty"
+>
   <img src={`/images/${name}/${url}.webp`} />
   <section class="px-phone py-10 relative">
-    <p class="text-[#333]">{name}</p>
+    <p class="text-[#333] italic capitalize">{name}</p>
 
-    <h2 class="text-2xl font-bold mb-4">{title}</h2>
+    <h2 class="text-2xl font-bold mb-4 text-primary">{title}</h2>
     <h3 class="font-semibold">Caracteristicas</h3>
     <p class="text-[#333] text-sm">{description}</p>
 
-    <h3 class="font-semibold mt-2">Medidas del producto</h3>
-    <p class="text-[#333] text-sm">{measures}</p>
+    {
+      measures && (
+        <>
+          <h3 class="font-semibold mt-2">Medidas del producto</h3>
+          <p class="text-[#333] text-sm">{measures}</p>
+        </>
+      )
+    }
 
-    <h3 class="font-semibold mt-2">Acabado</h3>
-    <p class="text-[#333] text-sm">{finish}</p>
+    {
+      finish && (
+        <>
+          <h3 class="font-semibold mt-2">Acabado</h3>
+          <p class="text-[#333] text-sm">{finish}</p>
+        </>
+      )
+    }
 
-    <h3 class="font-semibold mt-2">Tipos de vidrio</h3>
-    <p class="text-[#333] text-sm">{glass}</p>
+    {
+      glass && (
+        <>
+          <h3 class="font-semibold mt-2">Tipos de vidrio</h3>
+          <p class="text-[#333] text-sm">{glass}</p>
+        </>
+      )
+    }
     <a
       href="/#contacto"
       class="flex justify-center shadow-xl mt-10 bg-gradient-to-tr from-slate-600 to-[var(--color-primary)] text-white py-2 w-full text-center rounded-[var(--border)]"
