@@ -3,7 +3,7 @@ import sections from "../content/sections/sections.json";
 import CardSection from "./CardSection.astro";
 ---
 
-<div class="w-full flex flex-col gap-4 sm:max-w-2xl sm:mx-auto">
+<div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
   {
     sections.map((section) => {
       const name = section.name;

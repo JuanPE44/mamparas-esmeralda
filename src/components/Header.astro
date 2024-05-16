@@ -6,32 +6,40 @@ import IconInstagram from "./icons/IconInstagram.astro";
 import IconX from "./icons/IconX.astro";
 import { Image } from "astro:assets";
 import localLogo from "../../public/images/logos/logo.webp";
+import IconMail from "./icons/IconMail.astro";
 ---
 
 <header class="fixed top-0 w-full bg-white z-50 shadow-sm">
-  <div
-    class="relative py-2 px-phone flex justify-between transition-[0.5s] items-center w-full sm:max-w-2xl sm:mx-auto"
-    id="header"
-  >
-    <a href="/#home">
-      <Image
-        src={localLogo}
-        alt="Logo vidrieria Mamparas esmeralda"
-        class="h-12 w-auto object-contain"
-      />
-    </a>
-    <div class="hidden sm:flex">
-      <ul class="gap-4 flex text-primary uppercase text-xs">
-        <li><a href="/#home">Home</a></li>
-        <li><a href="/#productos">Productos</a></li>
-        <li><a href="/#empresa">La empresa</a></li>
-        <li><a href="/#contacto">Contacto</a></li>
-      </ul>
-    </div>
+  <section class="px-phone">
+    <div
+      class="relative py-1 flex justify-between transition-[0.5s] items-center w-full sm:max-w-3xl sm:mx-auto"
+      id="header"
+    >
+      <a href="/#home">
+        <Image
+          src={localLogo}
+          alt="Logo vidrieria Mamparas esmeralda"
+          class="h-12 w-auto object-contain"
+        />
+      </a>
+      <div class="hidden sm:flex">
+        <ul class="gap-4 flex items-center text-primary uppercase text-xs">
+          <li><a href="/#home">Home</a></li>
+          <li><a href="/#productos">Productos</a></li>
+          <li><a href="/#empresa">La empresa</a></li>
+          <li><a href="/#contacto">Contacto</a></li>
+          <li class="flex gap-1">
+            <IconFacebook color="fill-slate-600" />
+            <IconInstagram color="fill-slate-600" />
+            <IconMail color="fill-slate-600" />
+          </li>
+        </ul>
+      </div>
 
-    <div class="cursor-pointer sm:hidden transition-[0.5s]">
-      <div class="menu-icon">
-        <IconMenu />
+      <div class="cursor-pointer sm:hidden transition-[0.5s]">
+        <div class="menu-icon">
+          <IconMenu />
+        </div>
       </div>
     </div>
     <!-- Menu mobile -->
@@ -75,7 +83,7 @@ import localLogo from "../../public/images/logos/logo.webp";
     <button
       class="top-0 left-0 fixed bg-shadow h-screen w-full cursor-pointer hidden menu-icon"
       id="menu-background"></button>
-  </div>
+  </section>
 </header>
 
 <script>

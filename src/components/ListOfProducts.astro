@@ -9,7 +9,7 @@ const { name } = Astro.props;
 const products = productos[name];
 ---
 
-<div class="flex flex-col gap-8">
+<div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
   {
     products?.map((product) => {
       const { title, description, url, finish, measures, glass } = product;

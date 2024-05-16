@@ -8,7 +8,6 @@ interface Props {
 
 const { name } = Astro.props;
 const sectionsFiltered = sections.filter((section) => section.name == name);
-console.log(sectionsFiltered);
 const { title, subtitle } = sectionsFiltered[0];
 ---
 
@@ -18,8 +17,10 @@ const { title, subtitle } = sectionsFiltered[0];
   pt="pt-28"
   pb="pb-10"
 >
-  <h1 class="text-4xl sm:text-5xl text-white font-bold mb-4">
-    {title}
-  </h1>
-  <h3 class="text-[#aaa] capitalize">{subtitle}</h3>
+  <div class="sm:max-w-2xl sm:mx-auto text-center">
+    <h1 class="text-4xl sm:text-5xl text-white font-bold mb-4">
+      {title}
+    </h1>
+    <h3 class="text-[#aaa] capitalize">{subtitle}</h3>
+  </div>
 </Container>

@@ -3,16 +3,16 @@ import Container from "./Container.astro";
 import H2 from "./H2.astro";
 ---
 
-<Container>
+<Container className="flex justify-center">
   <span id="contacto"></span>
-  <div class="sm:max-w-2xl sm:mx-auto w-full">
-    <H2 color="text-rainbow">Contacto</H2>
-    <p class="mt-2 italic text-sm py-3">Envianos un mensaje!</p>
+  <div class="mx-auto max-w-96 w-full flex justify-center sm:max-w-3xl">
     <form
       action="https://formsubmit.co/valenruizph@gmail.com"
       method="POST"
-      class="flex flex-col gap-4 w-full max-w-96 rounded-xl mt-10 bg-white text-[#302916dd]"
+      class="flex flex-col gap-4 w-full max-w-96 rounded-xl bg-white text-[#302916dd]"
     >
+      <H2 color="text-rainbow">Contacto</H2>
+      <p class="mt-2 italic text-sm py-3">Envianos un mensaje!</p>
       <input
         type="text"
         name="name"

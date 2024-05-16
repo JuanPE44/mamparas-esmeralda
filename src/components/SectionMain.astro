@@ -1,25 +1,41 @@
 ---
+import Image from "astro/components/Image.astro";
 import Container from "./Container.astro";
+import img from "../../public/images/colocacion-vidrio.jpg";
+
+//  pb="pb-20 sm:pb-10 sm:min-h-[85vh] sm:items-center sm:flex"
 ---
 
 <Container
   backgroundUrl="/images/mamparas/principal.webp"
-  className="flex items-end flex-col"
   pt="pt-28"
+  pb="pb-10 sm:min-h-[85vh] sm:items-center sm:flex"
 >
-  <div class="h-full w-full flex pt flex-col sm:max-w-2xl sm:mx-auto mb-10">
-    <h1 class="text-4xl sm:text-5xl text-white font-bold mb-4">
-      <span class="text-rainbow">Transforma tu Espacio </span> con Mamparas de Vidrio
-    </h1>
-    <h2 class="text-[#eee]">
-      Estilo, elegancia y funcionalidad para tus espacios con nuestras mamparas
-      de vidrio a medida.
-    </h2>
+  <div
+    class="h-full w-full mb-10 flex flex-col mx-auto max-w-96 sm:max-w-3xl sm:flex-row sm:gap-5"
+  >
+    <div class="flex flex-col sm:justify-between">
+      <div>
+        <h1 class="text-4xl text-white font-bold mb-4">
+          <span class="text-rainbow">Transforma tu Espacio </span> con Mamparas de
+          Vidrio
+        </h1>
+        <h2 class="text-[#eee]">
+          Estilo, elegancia y funcionalidad para tus espacios con nuestras
+          mamparas de vidrio a medida.
+        </h2>
+      </div>
 
-    <a
-      href="/#contacto"
-      class="shadow-xl mt-10 bg-gradient-to-tr from-slate-600 to-primary text-white text-sm py-2 w-full text-center rounded-lg"
-      >Solicitar Presupuesto</a
-    >
+      <a
+        href="/#contacto"
+        class="shadow-xl mt-10 bg-gradient-to-tr from-slate-600 to-primary text-white text-sm py-2 w-full text-center rounded-lg sm:max-w-60"
+        >Solicitar Presupuesto</a
+      >
+    </div>
+    <Image
+      src={img}
+      alt="imagen inicio de mamparas esmeralda"
+      class="overflow-hidden w-full object-cover rounded-md mt-10 sm:mt-0 sm:min-w-80 md:min-w-96"
+    />
   </div>
 </Container>

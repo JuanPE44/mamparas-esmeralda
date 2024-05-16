@@ -1,4 +1,5 @@
 ---
+import Container from "./Container.astro";
 import Galery from "./Galery.astro";
 interface Props {
   name: string;
@@ -7,12 +8,12 @@ interface Props {
 const { name } = Astro.props;
 ---
 
-<section
-  class="bg-[url('https://images.hola.com/imagenes/decoracion/20240104245477/mamparas-de-bano-a-medida-o-estandar-am/1-352-347/mampara-a-medida-17m-m.jpg?tx=w_680')]"
->
-  <div class="py-20 z-[100] w-full h-full px-phone bg-[var(--color-shadow-1)]">
-    <h2 class="font-bold text-3xl text-white mb-10">Nuestro trabajo</h2>
+<Container backgroundUrl="../../public/images/barandas/principal.jpg">
+  <div class="sm:max-w-2xl sm:mx-auto">
+    <h2 class="font-bold text-3xl text-white mb-10 text-center">
+      Nuestro trabajo
+    </h2>
 
     <Galery name={name} />
   </div>
-</section>
+</Container>
