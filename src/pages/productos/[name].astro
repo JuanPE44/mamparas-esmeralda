@@ -1,9 +1,9 @@
 ---
 import sections from "../../content/sections/sections.json";
-import ListOfProducts from "../../components/ListOfProducts.astro";
 import HeaderProducts from "../../components/HeaderProducts.astro";
 import Layout from "../../layouts/Layout.astro";
 import SectionWork from "../../components/SectionWork.astro";
+import SectionProducts from "../../components/SectionProducts.astro";
 import H2 from "../../components/H2.astro";
 
 export function getStaticPaths() {
@@ -20,10 +20,6 @@ const { name } = Astro.params;
 ---
 
 <Layout title="Productos">
-  <HeaderProducts name={name} />
-  <section class="px-phone py-10 sm:max-w-2xl sm:mx-auto sm:w-full">
-    <H2 color="text-rainbow text-center" m="mb-10 mt-0">Nuestro servicio </H2>
-    <ListOfProducts name={name} />
-  </section>
+  <SectionProducts name={name} />
   <SectionWork name={name} />
 </Layout>

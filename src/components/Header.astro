@@ -3,13 +3,35 @@ import IconClose from "./icons/IconClose.astro";
 import IconFacebook from "./icons/IconFacebook.astro";
 import IconMenu from "./icons/IconMenu.astro";
 import IconInstagram from "./icons/IconInstagram.astro";
-import IconX from "./icons/IconX.astro";
+import IconMail from "./icons/IconMail.astro";
+import IconPhone from "./icons/IconPhone.astro";
 import { Image } from "astro:assets";
 import localLogo from "../../public/images/logos/logo.webp";
-import IconMail from "./icons/IconMail.astro";
 ---
 
 <header class="fixed top-0 w-full bg-white z-50 shadow-sm">
+  <section
+    class="bg-gradient-to-tr from-slate-600 to-primary hidden sm:block px-phone"
+  >
+    <div
+      class="sm:max-w-3xl sm:mx-auto flex justify-between items-center py-1 text-white text-xs"
+    >
+      <div class="flex gap-4">
+        <div class="flex gap-1">
+          <IconPhone w="w-4" />
+          <p>+54 2494887731</p>
+        </div>
+        <div class="flex gap-1">
+          <IconMail w="w-4" />
+          <p>mamparasesmeraldas@gmail.com</p>
+        </div>
+      </div>
+      <div class="flex gap-1">
+        <IconFacebook w="w-4" />
+        <IconInstagram w="w-4" />
+      </div>
+    </div>
+  </section>
   <section class="px-phone">
     <div
       class="relative py-1 flex justify-between transition-[0.5s] items-center w-full sm:max-w-3xl sm:mx-auto"
@@ -24,14 +46,23 @@ import IconMail from "./icons/IconMail.astro";
       </a>
       <div class="hidden sm:flex">
         <ul class="gap-4 flex items-center text-primary uppercase text-xs">
-          <li><a href="/#home">Home</a></li>
-          <li><a href="/#productos">Productos</a></li>
-          <li><a href="/#empresa">La empresa</a></li>
-          <li><a href="/#contacto">Contacto</a></li>
-          <li class="flex gap-1">
-            <IconFacebook color="fill-slate-600" />
-            <IconInstagram color="fill-slate-600" />
-            <IconMail color="fill-slate-600" />
+          <li>
+            <a href="/#home" class="rounded-lg p-1 hover:bg-[#3331]">Home</a>
+          </li>
+          <li>
+            <a href="/#productos" class="rounded-lg p-1 hover:bg-[#3331]"
+              >Productos</a
+            >
+          </li>
+          <li>
+            <a href="/#empresa" class="rounded-lg p-1 hover:bg-[#3331]"
+              >La empresa</a
+            >
+          </li>
+          <li>
+            <a href="/#contacto" class="rounded-lg p-1 hover:bg-[#3331]"
+              >Contacto</a
+            >
           </li>
         </ul>
       </div>
@@ -44,7 +75,7 @@ import IconMail from "./icons/IconMail.astro";
     </div>
     <!-- Menu mobile -->
     <div
-      class="sm:hidden pb-20 bg-gradient-to-tr from-slate-600 to-primary py-2 px-phone flex flex-col translate-x-full justify-between absolute top-0 transition-[0.5s] right-0 w-3/4 h-screen bg-white z-50"
+      class="sm:hidden pb-20 bg-gradient-to-tr from-slate-600 to-primary py-2 px-phone flex flex-col translate-x-full justify-between absolute top-0 transition-[0.5s] right-0 w-3/4 h-[100dvh] bg-white z-50"
       id="menu"
     >
       <ul class="flex gap-4 flex-col text-white font-light text-xl" id="menu-a">
@@ -54,29 +85,40 @@ import IconMail from "./icons/IconMail.astro";
           </div>
         </li>
         <li>
-          <a href="/#home" class="flex rounded-lg p-1 hover:bg-[#3333]">Home</a>
+          <a href="/#home" class="flex rounded-lg p-1 hover:bg-[#3331]">Home</a>
         </li>
         <li>
-          <a href="/#productos" class="flex rounded-lg p-1 hover:bg-[#3333]"
+          <a href="/#productos" class="flex rounded-lg p-1 hover:bg-[#3331]"
             >Productos</a
           >
         </li>
         <li>
-          <a href="/#empresa" class="flex rounded-lg p-1 hover:bg-[#3333]"
+          <a href="/#empresa" class="flex rounded-lg p-1 hover:bg-[#3331]"
             >La empresa</a
           >
         </li>
         <li>
-          <a href="/#contacto" class="flex rounded-lg p-1 hover:bg-[#3333]"
+          <a href="/#contacto" class="flex rounded-lg p-1 hover:bg-[#3331]"
             >Contacto</a
           >
         </li>
       </ul>
       <div>
-        <div class="flex gap-4">
-          <IconFacebook />
-          <IconInstagram />
-          <IconX />
+        <div
+          class="flex gap-4 flex-col text-white text-xs border-y-2 py-4 border-primary"
+        >
+          <div class="flex gap-1">
+            <IconPhone w="w-4" />
+            <p>+54 2494887731</p>
+          </div>
+          <div class="flex gap-1">
+            <IconMail w="w-4" />
+            <p>mamparasesmeraldas@gmail.com</p>
+          </div>
+        </div>
+        <div class="flex gap-1 mt-4">
+          <IconFacebook w="w-4" />
+          <IconInstagram w="w-4" />
         </div>
       </div>
     </div>
@@ -84,25 +126,25 @@ import IconMail from "./icons/IconMail.astro";
       class="top-0 left-0 fixed bg-shadow h-screen w-full cursor-pointer hidden menu-icon"
       id="menu-background"></button>
   </section>
+
+  <script>
+    const menuIcons = document.querySelectorAll(".menu-icon");
+    const menu = document.getElementById("menu");
+    const menuA = document.querySelectorAll("#menu-a li a");
+    const menuBackground = document.getElementById("menu-background");
+
+    menuIcons.forEach((icon) => {
+      icon.addEventListener("click", () => {
+        menu.classList.toggle("translate-x-full");
+        menuBackground.classList.toggle("hidden");
+      });
+    });
+
+    menuA.forEach((a) => {
+      a.addEventListener("click", () => {
+        menu.classList.toggle("translate-x-full");
+        menuBackground.classList.toggle("hidden");
+      });
+    });
+  </script>
 </header>
-
-<script>
-  const menuIcons = document.querySelectorAll(".menu-icon");
-  const menu = document.getElementById("menu");
-  const menuA = document.querySelectorAll("#menu-a li a");
-  const menuBackground = document.getElementById("menu-background");
-
-  menuIcons.forEach((icon) => {
-    icon.addEventListener("click", () => {
-      menu.classList.toggle("translate-x-full");
-      menuBackground.classList.toggle("hidden");
-    });
-  });
-
-  menuA.forEach((a) => {
-    a.addEventListener("click", () => {
-      menu.classList.toggle("translate-x-full");
-      menuBackground.classList.toggle("hidden");
-    });
-  });
-</script>

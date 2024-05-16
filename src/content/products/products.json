@@ -57,12 +57,16 @@
   ],
   "vidrios": [
     {
-      "title": "Espejos"
+      "url": "espejos",
+      "title": "Espejos",
+      "description": " una opción moderna y segura para cercos y barandas. Nuestro equipo altamente capacitado se encarga de la colocación precisa y duradera de estos postes, garantizando la estabilidad y resistencia de tus estructuras de vidrio. Con un enfoque en la calidad y la seguridad, nuestros servicios ofrecen una solución elegante y funcional para resaltar la belleza de tus espacios al aire libre mientras proporcionan protección y confiabilidad a largo plazo."
     },
     {
+      "url": "dvh",
       "title": "Doble vidrio hermetico"
     },
     {
+      "url": "reposicion-cristales",
       "title": "Reposicion de cristales"
     }
   ]

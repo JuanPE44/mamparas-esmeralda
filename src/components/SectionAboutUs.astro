@@ -1,28 +1,39 @@
 ---
+import Image from "astro/components/Image.astro";
 import Container from "./Container.astro";
 import H2 from "./H2.astro";
+import img from "../../public/images/negocio.jpg";
 ---
 
 <Container backgroundUrl="/images/negocio.jpg" className="flex items-end">
   <div class="max-w-96 mx-auto w-full sm:max-w-3xl">
     <H2>Sobre nosotros</H2>
-    <p class="text-gray-200 pt-4">
-      <span class="font-bold text-rainbow">Mamparas esmeralda</span> es una empresa
-      fundada por emigrantes italianos en
-      <span class="font-bold text-rainbow">Buenos Aires en 1914</span>, dedicada
-      a la industria del vidrio procesado.
-    </p>
-    <p class="text-gray-200 pt-4">
-      <span class="font-bold text-rainbow"
-        >Con cuatro generaciones de experiencia</span
-      >, nos destacamos por nuestra calidad en el producto y eficiencia en el
-      servicio.
-    </p>
-    <p class="text-gray-200 pt-4">
-      Nuestro legado se refleja en <span class="font-bold text-rainbow"
-        >innumerables obras realizadas</span
-      >, y seguimos comprometidos con el crecimiento y desarrollo continuo de la
-      industria del vidrio en Argentina.
-    </p>
+    <div class="flex gap-4">
+      <div>
+        <p class="text-gray-200 pt-4">
+          <span class="font-bold text-rainbow">Mamparas esmeralda</span> es una empresa
+          fundada por emigrantes italianos en
+          <span class="font-bold text-rainbow">Buenos Aires en 1914</span>,
+          dedicada a la industria del vidrio procesado.
+        </p>
+        <p class="text-gray-200 pt-4">
+          <span class="font-bold text-rainbow"
+            >Con cuatro generaciones de experiencia</span
+          >, nos destacamos por nuestra calidad en el producto y eficiencia en
+          el servicio.
+        </p>
+        <p class="text-gray-200 pt-4">
+          Nuestro legado se refleja en <span class="font-bold text-rainbow"
+            >innumerables obras realizadas</span
+          >, y seguimos comprometidos con el crecimiento y desarrollo continuo
+          de la industria del vidrio en Argentina.
+        </p>
+      </div>
+      <Image
+        src={img}
+        alt="imagen mamparas esmeralda"
+        class="hidden rounded-md sm:flex sm:max-w-96"
+      />
+    </div>
   </div>
 </Container>
