@@ -63,11 +63,35 @@
     },
     {
       "url": "dvh",
-      "title": "Doble vidrio hermetico"
+      "title": "Doble vidrio hermetico",
+      "description": " una opción moderna y segura para cercos y barandas. Nuestro equipo altamente capacitado se encarga de la colocación precisa y duradera de estos postes, garantizando la estabilidad y resistencia de tus estructuras de vidrio. Con un enfoque en la calidad y la seguridad, nuestros servicios ofrecen una solución elegante y funcional para resaltar la belleza de tus espacios al aire libre mientras proporcionan protección y confiabilidad a largo plazo."
     },
     {
       "url": "reposicion-cristales",
-      "title": "Reposicion de cristales"
+      "title": "Reposicion de cristales",
+      "description": " una opción moderna y segura para cercos y barandas. Nuestro equipo altamente capacitado se encarga de la colocación precisa y duradera de estos postes, garantizando la estabilidad y resistencia de tus estructuras de vidrio. Con un enfoque en la calidad y la seguridad, nuestros servicios ofrecen una solución elegante y funcional para resaltar la belleza de tus espacios al aire libre mientras proporcionan protección y confiabilidad a largo plazo."
+    }
+  ],
+  "frentes-comerciales": [
+    {
+      "url": "principal",
+      "title": "Diseño Personalizado",
+      "description": " una opción moderna y segura para cercos y barandas. Nuestro equipo altamente capacitado se encarga de la colocación precisa y duradera de estos postes, garantizando la estabilidad y resistencia de tus estructuras de vidrio. Con un enfoque en la calidad y la seguridad, nuestros servicios ofrecen una solución elegante y funcional para resaltar la belleza de tus espacios al aire libre mientras proporcionan protección y confiabilidad a largo plazo."
+    },
+    {
+      "url": "principal",
+      "title": "Materiales de alta calidad",
+      "description": " una opción moderna y segura para cercos y barandas. Nuestro equipo altamente capacitado se encarga de la colocación precisa y duradera de estos postes, garantizando la estabilidad y resistencia de tus estructuras de vidrio. Con un enfoque en la calidad y la seguridad, nuestros servicios ofrecen una solución elegante y funcional para resaltar la belleza de tus espacios al aire libre mientras proporcionan protección y confiabilidad a largo plazo."
+    },
+    {
+      "url": "principal",
+      "title": "Instalacion profesional",
+      "description": " una opción moderna y segura para cercos y barandas. Nuestro equipo altamente capacitado se encarga de la colocación precisa y duradera de estos postes, garantizando la estabilidad y resistencia de tus estructuras de vidrio. Con un enfoque en la calidad y la seguridad, nuestros servicios ofrecen una solución elegante y funcional para resaltar la belleza de tus espacios al aire libre mientras proporcionan protección y confiabilidad a largo plazo."
+    },
+    {
+      "url": "principal",
+      "title": "Mantenimiento y reparacion",
+      "description": " una opción moderna y segura para cercos y barandas. Nuestro equipo altamente capacitado se encarga de la colocación precisa y duradera de estos postes, garantizando la estabilidad y resistencia de tus estructuras de vidrio. Con un enfoque en la calidad y la seguridad, nuestros servicios ofrecen una solución elegante y funcional para resaltar la belleza de tus espacios al aire libre mientras proporcionan protección y confiabilidad a largo plazo."
     }
   ]
 }

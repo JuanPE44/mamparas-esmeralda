@@ -11,13 +11,20 @@
     "name": "barandas",
     "title": "Barandas y balcones",
     "subtitle": "Calidad y estilo en Mamparas de vidrio",
-    "url": "/images/barandas/principal.jpg"
+    "url": "/images/barandas/principal.webp"
   },
   {
     "id": 3,
     "name": "vidrios",
     "title": "Vidrios",
     "subtitle": "Calidad y estilo en Mamparas de vidrio",
-    "url": "/images/vidrios/principal.jpg"
+    "url": "/images/vidrios/principal.webp"
+  },
+  {
+    "id": 4,
+    "name": "frentes-comerciales",
+    "title": "Frestes comerciales",
+    "subtitle": "Calidad y estilo en Mamparas de vidrio",
+    "url": "/images/frentes-comerciales/principal.webp"
   }
 ]

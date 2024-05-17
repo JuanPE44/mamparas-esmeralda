@@ -7,6 +7,7 @@ import IconMail from "./icons/IconMail.astro";
 import IconPhone from "./icons/IconPhone.astro";
 import { Image } from "astro:assets";
 import localLogo from "../../public/images/logos/logo.webp";
+import { CONTACT } from "../constants.ts";
 ---
 
 <header class="fixed top-0 w-full bg-white z-50 shadow-sm">
@@ -19,16 +20,28 @@ import localLogo from "../../public/images/logos/logo.webp";
       <div class="flex gap-4">
         <div class="flex gap-1">
           <IconPhone w="w-4" />
-          <p>+54 2494887731</p>
+          <p>{CONTACT.phone}</p>
         </div>
         <div class="flex gap-1">
           <IconMail w="w-4" />
-          <p>mamparasesmeraldas@gmail.com</p>
+          <p>{CONTACT.gmail}</p>
         </div>
       </div>
       <div class="flex gap-1">
-        <IconFacebook w="w-4" />
-        <IconInstagram w="w-4" />
+        <a
+          href={CONTACT.facebook}
+          target="_blank"
+          class="cursor-pointer hover:scale-105"
+        >
+          <IconFacebook w="w-4" />
+        </a>
+        <a
+          href={CONTACT.instagram}
+          target="_blank"
+          class="cursor-pointer hover:scale-105"
+        >
+          <IconInstagram w="w-4" />
+        </a>
       </div>
     </div>
   </section>
@@ -109,16 +122,28 @@ import localLogo from "../../public/images/logos/logo.webp";
         >
           <div class="flex gap-1">
             <IconPhone w="w-4" />
-            <p>+54 2494887731</p>
+            <p>{CONTACT.phone}</p>
           </div>
           <div class="flex gap-1">
             <IconMail w="w-4" />
-            <p>mamparasesmeraldas@gmail.com</p>
+            <p>{CONTACT.gmail}</p>
           </div>
         </div>
         <div class="flex gap-1 mt-4">
-          <IconFacebook w="w-4" />
-          <IconInstagram w="w-4" />
+          <a
+            href={CONTACT.facebook}
+            target="_blank"
+            class="cursor-pointer hover:scale-105"
+          >
+            <IconFacebook w="w-6" />
+          </a>
+          <a
+            href={CONTACT.instagram}
+            target="_blank"
+            class="cursor-pointer hover:scale-105"
+          >
+            <IconInstagram w="w-6" />
+          </a>
         </div>
       </div>
     </div>

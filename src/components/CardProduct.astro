@@ -15,7 +15,13 @@ const { name, title, description, url, measures, finish, glass } = Astro.props;
 <div
   class="flex flex-col bg-white rounded-lg overflow-hidden shadow-md text-pretty"
 >
-  <img src={`/images/${name}/${url}.webp`} alt={title} />
+  <img
+    src={`/images/${name}/${url}.webp`}
+    alt={title}
+    class="h-96 object-cover"
+    decoding="async"
+    loading="lazy"
+  />
   <section class="px-phone py-10 relative flex flex-col justify-between h-full">
     <div>
       <p class="text-[#333] italic capitalize">{name}</p>

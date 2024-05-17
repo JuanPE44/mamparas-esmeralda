@@ -9,22 +9,26 @@ const { name } = Astro.props;
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full" id="gallery">
   <div class="grid gap-4">
     {
-      Array.from({ length: 5 }).map((_, i) => (
+      Array.from({ length: 4 }).map((_, i) => (
         <img
           src={`/images/${name}/${i + 1}.webp`}
           alt={`imaggen ${i} de la galeria ${name}`}
           class="w-full rounded-lg"
+          decoding="async"
+          loading="lazy"
         />
       ))
     }
   </div>
   <div class="grid gap-4">
     {
-      Array.from({ length: 5 }).map((_, i) => (
+      Array.from({ length: 4 }).map((_, i) => (
         <img
-          src={`/images/${name}/${i + 6}.webp`}
+          src={`/images/${name}/${i + 5}.webp`}
           alt={`imaggen ${i} de la galeria ${name}`}
           class="w-full rounded-lg"
+          decoding="async"
+          loading="lazy"
         />
       ))
     }

@@ -13,7 +13,9 @@ const { name, url, title } = Astro.props;
   class="rounded-lg shadow-xl overflow-hidden bg-cover bg-center cursor-pointer"
   style={`background-image: url(${url})`}
 >
-  <div class="bg-[var(--color-shadow-2)] h-72 flex justify-center items-center">
+  <div
+    class="bg-gradient-to-br from-[#4c636090] to-[#63636390] h-72 flex justify-center items-center transition-[0.5s] hover:bg-[#6363633c] hover:scale-110"
+  >
     <h4 class="text-white text-lg uppercase">{title}</h4>
   </div>
 </a>

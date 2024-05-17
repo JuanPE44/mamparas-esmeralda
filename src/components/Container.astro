@@ -2,7 +2,7 @@
 interface Props {
   backgroundUrl?: string;
   className?: string;
-  height?: string;
+  h?: string;
   pb?: string;
   pt?: string;
 }
@@ -10,7 +10,7 @@ interface Props {
 const {
   backgroundUrl,
   className = "",
-  height = "",
+  h = "",
   pb = "pb-20",
   pt = "pt-10",
 } = Astro.props;
@@ -20,8 +20,7 @@ const {
   style={`background-image: url(${backgroundUrl}); background-size: cover;`}
 >
   <div
-    style={`min-height: ${height};`}
-    class={`${className} ${backgroundUrl ? "bg-gradient-to-tr from-[#333e] to-[#213937ee]" : "bg-slate-100"} ${pb} ${pt} pt-10 z-50 w-full h-full px-phone`}
+    class={`${className} ${h} ${backgroundUrl ? "bg-gradient-to-tr from-[#333e] to-[#213937ee]" : "bg-slate-100"} ${pb} ${pt} pt-10 z-50 w-full h-full px-phone`}
   >
     <slot />
   </div>
