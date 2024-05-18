@@ -6,5 +6,5 @@ export const CONTACT = {
   facebook: "https://www.facebook.com/MamparasEsmeraldaTandil",
   phone: "+54 0249370102",
   whatsapp:
-    "https://wa.me/542494370102?text=Hola,%20estoy%20interesado%20en%20sus%20servicios",
+    "https://wa.me/542494370102?text=Hola,%20estoy%20interesado%20en%20los%20productos",
 };
