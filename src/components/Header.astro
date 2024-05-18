@@ -22,10 +22,10 @@ import { CONTACT } from "../constants.ts";
           <IconPhone w="w-4" />
           <p>{CONTACT.phone}</p>
         </div>
-        <div class="flex gap-1">
+        <a class="flex gap-1 cursor-pointer" href={`mailto:${CONTACT.gmail}`}>
           <IconMail w="w-4" />
           <p>{CONTACT.gmail}</p>
-        </div>
+        </a>
       </div>
       <div class="flex gap-1">
         <a

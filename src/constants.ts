@@ -1,9 +1,9 @@
 export const COLORS = { primary: "#42736f" };
 
 export const CONTACT = {
-  instagram: "instagram.com",
+  instagram: "https://www.instagram.com",
   gmail: "mamparasesmeralda@gmail.com",
-  facebook: "facebook.com",
-  phone: "+54 2494377662",
+  facebook: "https://www.facebook.com/MamparasEsmeraldaTandil",
+  phone: "+54 0249 438-7790",
   whatsapp: "https://wa.link/8zqvfp",
 };
