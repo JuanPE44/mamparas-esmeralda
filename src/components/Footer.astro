@@ -3,7 +3,7 @@ import IconFacebook from "./icons/IconFacebook.astro";
 import IconInstagram from "./icons/IconInstagram.astro";
 import { Image } from "astro:assets";
 import localLogo from "../../public/images/logos/logo-blanco.webp";
-import IconMail from "./icons/IconMail.astro";
+import { CONTACT } from "../constants";
 ---
 
 <footer class="px-phone py-10 bg-[#333] flex flex-col">
@@ -28,9 +28,21 @@ import IconMail from "./icons/IconMail.astro";
         alt="Logo vidrieria Mamparas esmeralda en blanco"
         class="max-w-40 object-contain w-fit"
       />
-      <div class="flex gap-2">
-        <IconFacebook />
-        <IconInstagram />
+      <div class="flex gap-1">
+        <a
+          href={CONTACT.facebook}
+          target="_blank"
+          class="cursor-pointer hover:scale-105"
+        >
+          <IconFacebook w="w-4" />
+        </a>
+        <a
+          href={CONTACT.instagram}
+          target="_blank"
+          class="cursor-pointer hover:scale-105"
+        >
+          <IconInstagram w="w-4" />
+        </a>
       </div>
     </div>
     <div

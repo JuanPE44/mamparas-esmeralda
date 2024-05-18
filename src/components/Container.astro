@@ -16,9 +16,13 @@ const {
 } = Astro.props;
 ---
 
-<section
-  style={`background-image: url(${backgroundUrl}); background-size: cover;`}
->
+<section class="relative">
+  <img
+    src={backgroundUrl}
+    class="object-cover absolute top-0 left-0 w-full h-full z-[-1]"
+    decoding="async"
+    loading="lazy"
+  />
   <div
     class={`${className} ${h} ${backgroundUrl ? "bg-gradient-to-tr from-[#333e] to-[#213937ee]" : "bg-slate-100"} ${pb} ${pt} pt-10 z-50 w-full h-full px-phone`}
   >
