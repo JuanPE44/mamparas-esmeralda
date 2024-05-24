@@ -13,12 +13,14 @@ import H2 from "./H2.astro";
       <H2 color="text-rainbow" m="mb-2">Contacto</H2>
       <p class="mt-2 italic text-sm py-3">Envianos un mensaje!</p>
       <input
+        required
         type="text"
         name="name"
         placeholder="Nombre"
         class="bg-gray-200 rounded-lg text-black px-2 py-2 outline-[#30291622]"
       />
       <input
+        required
         type="email"
         name="email"
         placeholder="Correo electronico"
@@ -26,6 +28,7 @@ import H2 from "./H2.astro";
       />
 
       <textarea
+        required
         name="comment"
         cols="15"
         rows="5"
