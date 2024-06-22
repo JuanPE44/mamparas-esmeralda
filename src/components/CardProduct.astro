@@ -7,9 +7,11 @@ interface Props {
   measures: string;
   finish: string;
   glass: string;
+  color: string;
 }
 
-const { name, title, description, url, measures, finish, glass } = Astro.props;
+const { name, title, description, url, measures, finish, glass, color } =
+  Astro.props;
 ---
 
 <div
@@ -22,9 +24,17 @@ const { name, title, description, url, measures, finish, glass } = Astro.props;
     decoding="async"
     loading="lazy"
   />
-  <section class="px-phone py-10 relative flex flex-col justify-between h-full">
+  <section
+    class="px-phone py-10 relative flex flex-col justify-between h-full"
+    style={color && `border-top: 20px solid ${color}`}
+  >
     <div>
-      <p class="text-[#333] italic capitalize">{name}</p>
+      <p
+        class="text-[#333] italic capitalize"
+        style={color && `color: ${color}`}
+      >
+        {name}
+      </p>
 
       <h2 class="text-2xl font-bold mb-4 text-primary">{title}</h2>
       <h3 class="font-semibold">Caracteristicas</h3>

@@ -6,4 +6,5 @@ export interface Product {
   finish: string;
   typeGlass: string;
   measures: string;
+  color: string;
 }
