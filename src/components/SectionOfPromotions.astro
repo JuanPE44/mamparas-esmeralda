@@ -1,0 +1,18 @@
+---
+import Container from "./Container.astro";
+import Carrousel from "./Carrousel.astro";
+---
+
+<Container
+  bgShadow="bg-gradient-to-tr from-[#eeee] to-[#eee] boder-b-4 border-[#0f0]"
+  backgroundUrl="/images/mamparas/principal.webp"
+>
+  <div class="max-w-96 mx-auto sm:max-w-3xl">
+    <h1 class="text-4xl text-rainbow font-bold mb-4 mt-3">Promociones</h1>
+    <h3 class="text-[#333] mb-10 text-sm">
+      Estas son nuestras promociones actuales! Envianos un mensaje para más
+      detalles.
+    </h3>
+    <Carrousel />
+  </div>
+</Container>

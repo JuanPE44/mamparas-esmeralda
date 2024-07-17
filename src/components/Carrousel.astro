@@ -1,0 +1,109 @@
+---
+import CardPromotion from "./CardPromotion.astro";
+import promotions from "./../content/promotions/promotions.json";
+---
+
+<div class="relative">
+  <div class="swiper rounded-lg">
+    <div class="swiper-wrapper">
+      {
+        promotions.map((promotion) => {
+          return (
+            <div class="swiper-slide">
+              <CardPromotion {...promotion} />
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+
+<style>
+  .swiper-slide {
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 45px;
+  }
+
+  .swiper-pagination {
+    bottom: -50px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 30px #0003;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 2rem;
+    overflow: visible;
+    z-index: 1;
+  }
+
+  .swiper-button-next {
+    right: -16px;
+  }
+
+  .swiper-button-prev {
+    left: -16px;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    transform: rotate(45deg);
+    position: relative;
+  }
+
+  .swiper-button-prev::after {
+    left: 2px;
+  }
+  .swiper-button-next::after {
+    left: -2px;
+  }
+
+  .swiper-button-prev::after {
+    transform: rotate(-135deg);
+  }
+</style>
+
+<script>
+  import Swiper from "swiper";
+  import "swiper/css";
+  import { Navigation, Pagination, Autoplay } from "swiper/modules";
+  import "swiper/css/navigation";
+  import "swiper/css/pagination";
+
+  const swiper = new Swiper(".swiper", {
+    modules: [Navigation, Pagination, Autoplay],
+    autoplay: {
+      delay: 5000,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 15,
+    navigation: {
+      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next",
+    },
+  });
+</script>

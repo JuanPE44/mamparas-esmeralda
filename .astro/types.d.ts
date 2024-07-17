@@ -136,6 +136,13 @@ declare module 'astro:content' {
   data: any
 };
 };
+"promotions": {
+"promotions": {
+	id: "promotions";
+  collection: "promotions";
+  data: any
+};
+};
 "sections": {
 "sections": {
 	id: "sections";

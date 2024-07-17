@@ -5,6 +5,8 @@ interface Props {
   h?: string;
   pb?: string;
   pt?: string;
+  bg?: string;
+  bgShadow?: string;
 }
 
 const {
@@ -13,6 +15,8 @@ const {
   h = "",
   pb = "pb-20",
   pt = "pt-10",
+  bg = "bg-slate-100",
+  bgShadow,
 } = Astro.props;
 ---
 
@@ -29,7 +33,7 @@ const {
     )
   }
   <div
-    class={`${className} ${h} ${backgroundUrl ? "bg-gradient-to-tr from-[#333e] to-[#213937ee]" : "bg-slate-100"} ${pb} ${pt} pt-10 z-50 w-full h-full px-phone`}
+    class={`${className} ${h} ${backgroundUrl ? (bgShadow ? bgShadow : "bg-gradient-to-tr from-[#333e] to-[#213937ee]") : bg} ${pb} ${pt} pt-10 z-50 w-full h-full px-phone`}
   >
     <slot />
   </div>

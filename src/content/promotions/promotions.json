@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Rebatible",
+    "description": "Caracteristicas de la promoción 1",
+    "color": "#f05b9d",
+    "url": "promotion-1",
+    "price": 80000,
+    "disccount": 10
+  },
+  {
+    "title": "Frontal",
+    "description": "Caracteristicas de la promoción 1",
+    "color": "#fc8e36",
+    "url": "promotion-2",
+    "price": 100000,
+    "disccount": 20
+  },
+  {
+    "title": "Frontal",
+    "description": "Caracteristicas de la promoción 1",
+    "color": "#8dc760",
+    "url": "promotion-3",
+    "price": 120000,
+    "disccount": 15
+  }
+]
