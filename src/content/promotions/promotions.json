@@ -1,26 +1,38 @@
 [
   {
-    "title": "Rebatible",
+    "section": "Mampara",
+    "title": "Paño Fijo",
     "description": "Caracteristicas de la promoción 1",
     "color": "#f05b9d",
-    "url": "promotion-1",
+    "url": "paño-fijo-receptaculo",
     "price": 80000,
     "disccount": 10
   },
   {
-    "title": "Frontal",
+    "section": "Mampara",
+    "title": "Receptáculo",
     "description": "Caracteristicas de la promoción 1",
     "color": "#fc8e36",
-    "url": "promotion-2",
-    "price": 100000,
+    "url": "paño-fijo-receptaculo",
+    "price": 120000,
     "disccount": 20
   },
   {
-    "title": "Frontal",
+    "section": "Espejo",
+    "title": "Ciruclar",
     "description": "Caracteristicas de la promoción 1",
     "color": "#8dc760",
-    "url": "promotion-3",
-    "price": 120000,
+    "url": "espejo-circular",
+    "price": 20000,
+    "disccount": 15
+  },
+  {
+    "section": "Espejo",
+    "title": "Rectangular",
+    "description": "Caracteristicas de la promoción 1",
+    "color": "#f1c141",
+    "url": "espejo-rectangular",
+    "price": 15000,
     "disccount": 15
   }
 ]

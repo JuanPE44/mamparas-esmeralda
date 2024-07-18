@@ -80,6 +80,13 @@ import promotions from "./../content/promotions/promotions.json";
   .swiper-button-prev::after {
     transform: rotate(-135deg);
   }
+
+  @media screen and (max-width: 400px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+  }
 </style>
 
 <script>
@@ -99,8 +106,15 @@ import promotions from "./../content/promotions/promotions.json";
       clickable: true,
     },
     loop: true,
-    slidesPerView: 2,
-    spaceBetween: 15,
+    slidesPerView: 1,
+    spaceBetween: 5,
+
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 5,
+      },
+    },
     navigation: {
       prevEl: ".swiper-button-prev",
       nextEl: ".swiper-button-next",
