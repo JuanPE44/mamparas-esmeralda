@@ -2,16 +2,16 @@
   {
     "section": "Mampara",
     "title": "Paño Fijo",
-    "description": "Caracteristicas de la promoción 1",
+    "description": "Altura Estandar de 155.0 cm",
     "color": "#f05b9d",
-    "url": "paño-fijo-receptaculo",
+    "url": "paño-fijo",
     "price": 80000,
     "disccount": 10
   },
   {
     "section": "Mampara",
     "title": "Receptáculo",
-    "description": "Caracteristicas de la promoción 1",
+    "description": "Altura Estandar de 155.0 cm",
     "color": "#fc8e36",
     "url": "paño-fijo-receptaculo",
     "price": 120000,
@@ -20,7 +20,7 @@
   {
     "section": "Espejo",
     "title": "Ciruclar",
-    "description": "Caracteristicas de la promoción 1",
+    "description": "Espejo redondo de 60 cm x 60 cm",
     "color": "#8dc760",
     "url": "espejo-circular",
     "price": 20000,
@@ -29,7 +29,7 @@
   {
     "section": "Espejo",
     "title": "Rectangular",
-    "description": "Caracteristicas de la promoción 1",
+    "description": "Espejo rectangular de 60 cm x 40 cm",
     "color": "#f1c141",
     "url": "espejo-rectangular",
     "price": 15000,

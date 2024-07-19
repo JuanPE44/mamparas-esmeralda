@@ -11,7 +11,10 @@ interface Props {
 
 const { color, title, disccount, description, price, url, section } =
   Astro.props;
-const discount = (price * disccount) / 100;
+
+function formatNumber(num) {
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
 ---
 
 <div class="flex bg-white rounded-lg overflow-hidden w-full mix-h-max">
@@ -20,7 +23,7 @@ const discount = (price * disccount) / 100;
       class="absolute top-4 left-2 rounded-xl text-white px-3 py-1 text-xs"
       style={`background-color: ${color}`}
     >
-      {disccount}% OFF
+      Promocion
     </div>
     <img
       src={`/images/promotions/${url}.webp`}
@@ -44,12 +47,15 @@ const discount = (price * disccount) / 100;
     <div class="flex flex-col">
       <h3 class="font-semibold" style={`color: ${color}`}>Precio</h3>
       <div class="flex gap-2 items-end">
-        <p class="text-gray-400 line-through">${price}</p>
-        <p class="font-extrabold text-black text-xl">${price - discount}</p>
+        <!--
+        <p class="text-gray-400 line-through">${price}</p>  
+        -->
+        <p class="font-extrabold text-black text-xl">${formatNumber(price)}</p>
       </div>
       <a
-        href="/#contacto"
+        href={`https://wa.me/542494370102?text=Hola,%20estoy%20interesado%20en%20la%20promocion%20${section}%20${title}`}
         style={`background:  ${color}`}
+        target="_blank"
         class="shadow-xl mt-2 text-white text-sm py-2 w-full text-center rounded-lg transition-[0.3s] hover:scale-105"
       >
         Comprar
