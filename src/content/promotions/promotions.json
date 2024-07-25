@@ -9,6 +9,15 @@
     "disccount": 10
   },
   {
+    "section": "Espejo",
+    "title": "Rectangular",
+    "description": "Espejo rectangular de 60 cm x 40 cm",
+    "color": "#f1c141",
+    "url": "espejo-rectangular",
+    "price": 15000,
+    "disccount": 15
+  },
+  {
     "section": "Mampara",
     "title": "Receptáculo",
     "description": "Altura Estandar de 155.0 cm",
@@ -24,15 +33,6 @@
     "color": "#8dc760",
     "url": "espejo-circular",
     "price": 20000,
-    "disccount": 15
-  },
-  {
-    "section": "Espejo",
-    "title": "Rectangular",
-    "description": "Espejo rectangular de 60 cm x 40 cm",
-    "color": "#f1c141",
-    "url": "espejo-rectangular",
-    "price": 15000,
     "disccount": 15
   }
 ]
