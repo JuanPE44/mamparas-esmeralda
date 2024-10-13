@@ -1,6 +1,7 @@
 ---
 import CardPromotion from "./CardPromotion.astro";
 import promotions from "./../content/promotions/promotions.json";
+import Dialog from "./Dialog.astro";
 ---
 
 <div class="relative">
@@ -17,6 +18,7 @@ import promotions from "./../content/promotions/promotions.json";
       }
     </div>
   </div>
+  <Dialog />
   <div class="swiper-pagination"></div>
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
@@ -99,7 +101,7 @@ import promotions from "./../content/promotions/promotions.json";
   const swiper = new Swiper(".swiper", {
     modules: [Navigation, Pagination, Autoplay],
     autoplay: {
-      delay: 5000,
+      delay: 6000,
     },
     pagination: {
       el: ".swiper-pagination",

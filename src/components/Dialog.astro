@@ -1,0 +1,29 @@
+---
+import IconClose from "./icons/IconClose.astro";
+---
+
+<dialog id="dialog" class="fixed top-0 z-50 w-full h-full bg-transparent">
+  <div
+    class="container w-full h-full flex justify-center bg-gradient-to-tr from-[#333e] to-[#213937ee] items-center absolute inset-0 px-5 py-10 sm:px-10"
+  >
+    <div class="cursor-pointer absolute top-5 right-5">
+      <IconClose />
+    </div>
+    <div class="relative shadow-xl rounded-lg p-4 max-w-lg mx-auto">
+      <img
+        class="w-full h-full object-contain"
+        src="/images/promotions/paño-fijo.webp"
+        alt="Tu imagen"
+      />
+    </div>
+  </div>
+</dialog>
+
+<script>
+  const modal = document.getElementById("dialog") as HTMLDialogElement;
+  const container = modal.querySelector(".container");
+
+  container.addEventListener("click", (e) => {
+    modal.close();
+  });
+</script>

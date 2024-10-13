@@ -17,7 +17,9 @@ function formatNumber(num) {
 }
 ---
 
-<div class="flex bg-white rounded-lg overflow-hidden w-full mix-h-max">
+<div
+  class="promotion flex bg-white rounded-lg overflow-hidden w-full mix-h-max"
+>
   <div class="relative">
     <div
       class="absolute top-4 left-2 rounded-xl text-white px-3 py-1 text-xs"
@@ -28,7 +30,7 @@ function formatNumber(num) {
     <img
       src={`/images/promotions/${url}.webp`}
       alt={title}
-      class="h-full w-64 object-cover"
+      class="h-full w-64 object-cover img-promotion"
       decoding="async"
       loading="lazy"
     />
@@ -63,3 +65,18 @@ function formatNumber(num) {
     </div>
   </div>
 </div>
+
+<script>
+  const promotions = document.querySelectorAll(".promotion");
+  const modal = document.getElementById("dialog") as HTMLDialogElement;
+
+  promotions.forEach((promotion) => {
+    promotion.addEventListener("click", () => {
+      const imgPromotion = promotion.querySelector(
+        ".img-promotion"
+      ) as HTMLImageElement;
+      modal.querySelector("img").setAttribute("src", imgPromotion.src);
+      modal.open = true;
+    });
+  });
+</script>
