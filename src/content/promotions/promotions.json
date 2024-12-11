@@ -2,16 +2,16 @@
   {
     "section": "Mampara",
     "title": "Paño Fijo",
-    "description": "Altura Estandar de 155.0 cm",
+    "description": "Medida Estandar de 140x80 cm",
     "color": "#f05b9d",
     "url": "paño-fijo",
-    "price": 80000,
+    "price": 120000,
     "disccount": 10
   },
   {
     "section": "Espejo",
     "title": "Rectangular",
-    "description": "Espejo rectangular de 60 cm x 40 cm",
+    "description": "Espejo rectangular de 60x40 cm",
     "color": "#f1c141",
     "url": "espejo-rectangular",
     "price": 15000,
@@ -20,16 +20,16 @@
   {
     "section": "Mampara",
     "title": "Receptáculo",
-    "description": "Altura Estandar de 155.0 cm",
+    "description": "Medida Estandar de 180x80 cm",
     "color": "#fc8e36",
     "url": "paño-fijo-receptaculo",
-    "price": 120000,
+    "price": 150000,
     "disccount": 20
   },
   {
     "section": "Espejo",
     "title": "Ciruclar",
-    "description": "Espejo redondo de 60 cm x 60 cm",
+    "description": "Espejo redondo de 60x60 cm",
     "color": "#8dc760",
     "url": "espejo-circular",
     "price": 20000,
